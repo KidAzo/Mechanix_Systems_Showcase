@@ -1,11 +1,14 @@
 
+# 🎯 OBJ Exporter
 
-* Utility class for exporting Unity GameObject hierarchies to OBJ format, handling mesh filtering,
-transformation to world space, and preserving object structure through named groups.
+A lightweight and intuitive Unity utility for exporting 3D models to the `.obj` format — perfect for converting FBX files and selected scene objects for use in Blender, CAD tools, and other 3D software.
 
-* That is part of my biggest project you can make this code more abstract and use it in your project
+## ✨ Features
 
-* You can use these Unity scenes in Blender, CAD or wherever you need.
+- 🧩 **Selective Export:** Export all desired objects in the scene to the `.obj` format with ease.
+- 🧭 **Hierarchical Support:** Automatically includes all child transforms under a selected GameObject, preserving the hierarchy.
+- 🚫 **Clean Output:** Exclude unnecessary components like outlines or visual effects from the exported mesh.
+- 🔄 **Cross-Software Compatibility:** Fully compatible with popular 3D software such as Blender, CAD tools, and other modeling environments.
 
 
 ![NBlend-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fb7f578e-56bd-49d9-bfc0-c3cbebded08b)
