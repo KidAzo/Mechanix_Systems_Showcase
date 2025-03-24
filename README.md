@@ -14,4 +14,5 @@ A lightweight and intuitive Unity utility for exporting 3D models to the `.obj` 
 
 ![image](https://github.com/user-attachments/assets/6d5db593-8a45-4691-beb8-a3ee01fd4c7b)
 
+![image](https://github.com/user-attachments/assets/cc085a29-ac0c-445b-9cf5-01c1fc112826)
 
