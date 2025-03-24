@@ -2,7 +2,7 @@
 
 This repository showcases three key architectural systems developed in **Unity C#** using best practices like **Dependency Injection (Zenject)**, **Command Pattern**, and **Strategy Pattern**. The purpose of this repo is to demonstrate clean, modular, and scalable code in a professional Unity project context.
 
-This repo contains only the scripts of some systems of the program. Below is the full video of the program: 
+This repo contains only the scripts of some systems of the program. Full video of the program: 
 https://www.youtube.com/watch?v=Go8KRYPfkJs&list=TLGGcs1D4ItDK7cyNDAzMjAyNQ
 
 ---
