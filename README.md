@@ -10,8 +10,8 @@ A lightweight and intuitive Unity utility for exporting 3D models to the `.obj` 
 - 🚫 **Clean Output:** Exclude unnecessary components like outlines or visual effects from the exported mesh.
 - 🔄 **Cross-Software Compatibility:** Fully compatible with popular 3D software such as Blender, CAD tools, and other modeling environments.
 
+![NBlend (3)](https://github.com/user-attachments/assets/97adbcc2-3552-4f14-abdb-9b97db76cc54)
 
-![NBlend-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fb7f578e-56bd-49d9-bfc0-c3cbebded08b)
 
 ![image](https://github.com/user-attachments/assets/6d5db593-8a45-4691-beb8-a3ee01fd4c7b)
 
