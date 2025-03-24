@@ -99,9 +99,7 @@ An extensible undo system built with the **Command Pattern**, allowing every use
 
 ## 📚 License
 
-This project is for educational and portfolio purposes only.  
-Feel free to explore, learn, and get inspired.
-
+This project is for commercial purposes.
 ---
 
 ## 👨‍💻 Author
