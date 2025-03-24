@@ -1,4 +1,3 @@
-![NBlend (5)](https://github.com/user-attachments/assets/5dbd1c8c-3270-46b8-9737-6c220fe135cb)
 # 🎯 OBJ Exporter
 
 A lightweight and intuitive Unity utility for exporting 3D models to the `.obj` format — perfect for converting FBX files and selected scene objects for use in Blender, CAD tools, and other 3D software.
