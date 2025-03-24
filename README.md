@@ -1,18 +1,111 @@
-# 🎯 OBJ Exporter
+# 🧩 FactoryTemplate Systems Showcase
 
-A lightweight and intuitive Unity utility for exporting 3D models to the `.obj` format — perfect for converting FBX files and selected scene objects for use in Blender, CAD tools, and other 3D software.
+This repository showcases three key architectural systems developed in **Unity C#** using best practices like **Dependency Injection (Zenject)**, **Command Pattern**, and **Strategy Pattern**. The purpose of this repo is to demonstrate clean, modular, and scalable code in a professional Unity project context.
 
-## ✨ Features
+---
 
-- 🧩 **Selective Export:** Export all desired objects in the scene to the `.obj` format with ease.
-- 🧭 **Hierarchical Support:** Automatically includes all child transforms under a selected GameObject, preserving the hierarchy.
-- 🚫 **Clean Output:** Exclude unnecessary components like outlines or visual effects from the exported mesh.
-- 🔄 **Cross-Software Compatibility:** Fully compatible with popular 3D software such as Blender, CAD tools, and other modeling environments.
+## 📦 Project Structure
 
+_assets/ └── _scripts/ ├── RemovingSystem/ ├── SelectionStrategySystem/ └── UndoSystem/
+---
 
-![NBlend (5)](https://github.com/user-attachments/assets/765ed74d-e51d-4f18-b7d5-ec630a3f8ba7)
+## 🗑️ RemovingSystem
 
-![image](https://github.com/user-attachments/assets/6d5db593-8a45-4691-beb8-a3ee01fd4c7b)
+Handles the removal of machines or custom objects (e.g., `ConcealerObject`) from the scene. This system is tightly integrated with the selection and undo systems to ensure consistent user interaction and reversibility.
 
-![image](https://github.com/user-attachments/assets/dc8acf8b-e20b-45ee-8b99-7a901b3acbaf)
+### 🔧 Core: `RemoveManager`
+
+- Removes selected objects via UI or input (e.g., `Delete` key)
+- Tracks selection via `ISelectionManager` and `IAdditionalSelectionService`
+- Integrates with undo system using `ICommandManager`
+
+### ✅ Features
+
+- Unity UI and input-triggered deletion
+- Multi-object removal support
+- Object type checking (`Machine`, `ConcealerObject`)
+- Undoable commands: `MachineRemovedCommand`, `ConcealerRemovedCommand`
+
+---
+
+## 🧠 SelectionStrategySystem
+
+A highly modular selection architecture that dynamically switches selection behavior based on the active tool. Implements the **Strategy Pattern**.
+
+### 🔧 Core: `SelectionStrategyController`
+
+- Dynamically changes strategy via `NavigationTool` enum
+- Strategies implement `ISelectionStrategy`
+
+### 📌 Supported Strategies
+
+| Tool              | Strategy Class                | Behavior                             |
+|-------------------|-------------------------------|--------------------------------------|
+| Movement          | `MovementSelectionStrategy`    | Selects for movement                 |
+| Rotation          | `RotationSelectionStrategy`    | Selects for rotation                 |
+| Snap              | `SnappingSelectionStrategy`    | Selects for grid/magnet snapping     |
+| Remove            | `RemovingSelectionStrategy`    | Selects for deletion                 |
+| Empty             | `EmptySelectionStrategy`       | No selection                         |
+
+### ✅ Features
+
+- Strategy-based selection logic
+- Event-driven (e.g., `SnappingSelectionEvent`, `RotationSelectionEvent`)
+- Accessor selection support for snapping tools
+
+---
+
+## ♻️ UndoSystem
+
+An extensible undo system built with the **Command Pattern**, allowing every user action to be stored and reversed reliably.
+
+### 🔧 Core: `CommandManager`
+
+- Singleton-based manager for `ICommand` actions
+- Supports up to 20 stacked commands (`CustomStack<T>`)
+- Binds undo logic to input via `IInputManager`
+
+### 📦 Sample Commands
+
+| Command Type              | Undo Behavior Description                               |
+|---------------------------|----------------------------------------------------------|
+| `MoveCommand`             | Restores previous position                              |
+| `RotationCommand`         | Reverts rotation                                         |
+| `MachineCreatedCommand`   | Removes created machines                                 |
+| `MachineRemovedCommand`   | Restores removed machines                                |
+| `ConveyorChangedCommand`  | Switches back to the previous conveyor                   |
+| `ConcealerRemovedCommand` | Re-displays concealer objects and their hierarchy        |
+| `PivotChangeCommand`      | Reverts pivot transformation                             |
+
+### ✅ Features
+
+- Command encapsulation for all user actions
+- System-agnostic undo logic
+- Modular and extendable command set
+
+---
+
+## 🛠️ Tech Stack
+
+- 🎮 Unity Engine (2022+)
+- 💉 Zenject (Dependency Injection)
+- 🧠 Design Patterns:
+  - Strategy Pattern
+  - Command Pattern
+- 🧪 Event Bus Architecture
+- 🧹 Clean Code Practices
+
+---
+
+## 📚 License
+
+This project is for educational and portfolio purposes only.  
+Feel free to explore, learn, and get inspired.
+
+---
+
+## 👨‍💻 Author
+
+Developed by [Azizhan Cil] – a Unity developer passionate about scalable architecture and maintainable gameplay systems.
+
 
